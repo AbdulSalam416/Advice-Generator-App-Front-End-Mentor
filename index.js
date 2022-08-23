@@ -17,8 +17,8 @@ icon.addEventListener("click", results )
 
 
 function results(){
-
-    fetch(link).then((endpoint)=> endpoint.json())
+    
+    fetch(link, { cache: 'no-cache' }).then((endpoint)=> endpoint.json())
     .then(data=> {
 
         let id = data.slip.id;
